@@ -1,6 +1,6 @@
 using System.Linq;
 
-namespace TusDotNetClient
+namespace qckdev.Storage.TusDotNetClient
 {
     /// <summary>
     /// Represents information about a Tus enabled server.

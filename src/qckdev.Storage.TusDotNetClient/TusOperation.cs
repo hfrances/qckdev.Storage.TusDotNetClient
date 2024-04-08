@@ -1,7 +1,7 @@
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 
-namespace TusDotNetClient
+namespace qckdev.Storage.TusDotNetClient
 {
     /// <summary>
     /// A delegate used for reporting progress of a transfer of bytes.

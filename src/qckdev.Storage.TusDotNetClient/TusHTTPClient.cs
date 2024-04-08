@@ -5,7 +5,7 @@ using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace TusDotNetClient
+namespace qckdev.Storage.TusDotNetClient
 {
     /// <summary>
     /// A class to execute requests against a Tus enabled server.

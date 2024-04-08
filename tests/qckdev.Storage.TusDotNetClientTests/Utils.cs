@@ -1,7 +1,7 @@
 using System.Linq;
 using System.Security.Cryptography;
 
-namespace TusDotNetClientTests
+namespace qckdev.Storage.TusDotNetClientTests
 {
     public class Utils
     {

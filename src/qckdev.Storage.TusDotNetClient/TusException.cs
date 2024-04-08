@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net;
 
-namespace TusDotNetClient
+namespace qckdev.Storage.TusDotNetClient
 {
     /// <summary>
     /// Represents an exception that might occur when using <see cref="TusClient"/>.

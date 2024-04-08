@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 
-namespace TusDotNetClientTests
+namespace qckdev.Storage.TusDotNetClientTests
 {
     public class Fixture : IDisposable
     {

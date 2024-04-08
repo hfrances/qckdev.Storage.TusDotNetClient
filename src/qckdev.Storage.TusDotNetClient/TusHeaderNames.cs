@@ -1,4 +1,4 @@
-namespace TusDotNetClient
+namespace qckdev.Storage.TusDotNetClient
 {
     /// <summary>
     /// A collection of the header names used by the Tus protocol.

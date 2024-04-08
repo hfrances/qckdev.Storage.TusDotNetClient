@@ -2,11 +2,11 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Shouldly;
-using TusDotNetClient;
+using qckdev.Storage.TusDotNetClient;
 using Xunit;
-using static TusDotNetClientTests.Utils;
+using static qckdev.Storage.TusDotNetClientTests.Utils;
 
-namespace TusDotNetClientTests
+namespace qckdev.Storage.TusDotNetClientTests
 {
     public class TusClientTests : IClassFixture<Fixture>
     {

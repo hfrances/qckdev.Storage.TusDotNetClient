@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Threading;
 
-namespace TusDotNetClient
+namespace qckdev.Storage.TusDotNetClient
 {
     /// <summary>
-    /// HTTP methods supported by <see cref="TusDotNetClient"/>
+    /// HTTP methods supported by <see cref="qckdev.Storage.TusDotNetClient"/>
     /// </summary>
     public enum RequestMethod
     {

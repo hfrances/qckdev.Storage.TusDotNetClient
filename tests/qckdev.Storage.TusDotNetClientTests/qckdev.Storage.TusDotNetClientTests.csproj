@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netcoreapp2.2</TargetFramework>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
 
         <IsPackable>false</IsPackable>
 
@@ -20,7 +20,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\src\TusDotNetClient\TusDotNetClient.csproj" />
+      <ProjectReference Include="..\..\src\qckdev.Storage.TusDotNetClient\qckdev.Storage.TusDotNetClient.csproj" />
     </ItemGroup>
 
 </Project>
