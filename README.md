@@ -5,6 +5,7 @@
 - Supports tus v1.0.0
 - Protocol extensions supported: Creation, Termination
 - Upload progress events
+- ***[New]*** Compatible with: netstandard2.0, net461, net451, net45, net40 & net35
 
 ## Usage
 ```c#

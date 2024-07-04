@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net461;net451;$(net45);$(net40);$(net35)</TargetFrameworks>
+    <RootNamespace>qckdev.Storage.TusDotNetClientSync</RootNamespace>
+    <AssemblyName>qckdev.Storage.TusDotNetClientSync</AssemblyName>
+    <PackageId>qckdev.Storage.TusDotNetClientSync</PackageId>
+    <Authors>hfrances</Authors>
+    <Description>A client library for interacting with a Tus enabled server.</Description>
+    <RepositoryUrl>https://github.com/hfrances/qckdev.Storage.TusDotNetClient</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/hfrances/qckdev.Storage.TusDotNetClient</PackageProjectUrl>
+    <License>MIT</License>
+    <LangVersion>latest</LangVersion>
+    <Version>1.2.0.1-alpha</Version>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+</Project>
