@@ -10,7 +10,7 @@
     <PackageProjectUrl>https://github.com/hfrances/qckdev.Storage.TusDotNetClient</PackageProjectUrl>
     <License>MIT</License>
     <LangVersion>latest</LangVersion>
-    <Version>1.2.0.1</Version>
+    <Version>1.2.0.2</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>

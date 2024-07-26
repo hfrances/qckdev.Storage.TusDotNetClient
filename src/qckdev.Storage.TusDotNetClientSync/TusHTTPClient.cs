@@ -97,42 +97,44 @@ namespace qckdev.Storage.TusDotNetClientSync
                     }
                 }
 
-                var response = (HttpWebResponse)webRequest.GetResponse();
-
-                //contentLength=0 for gzipped responses due to .net bug
-                long contentLength = Math.Max(response.ContentLength, 0);
-
-                buffer = new byte[16 * 1024];
-
-                var outputStream = new MemoryStream();
-
-                using (var responseStream = response.GetResponseStream())
+                using (var response = (HttpWebResponse)webRequest.GetResponse())
                 {
-                    if (responseStream != null)
+
+                    //contentLength=0 for gzipped responses due to .net bug
+                    long contentLength = Math.Max(response.ContentLength, 0);
+
+                    buffer = new byte[16 * 1024];
+
+                    var outputStream = new MemoryStream();
+
+                    using (var responseStream = response.GetResponseStream())
                     {
-                        var bytesRead = responseStream.Read(buffer, 0, buffer.Length);
-
-                        request.OnDownloadProgressed(0, contentLength);
-
-                        var totalBytesRead = 0L;
-                        while (bytesRead > 0)
+                        if (responseStream != null)
                         {
-                            totalBytesRead += bytesRead;
+                            var bytesRead = responseStream.Read(buffer, 0, buffer.Length);
 
-                            request.OnDownloadProgressed(totalBytesRead, contentLength);
+                            request.OnDownloadProgressed(0, contentLength);
 
-                            outputStream.Write(buffer, 0, bytesRead);
+                            var totalBytesRead = 0L;
+                            while (bytesRead > 0)
+                            {
+                                totalBytesRead += bytesRead;
 
-                            bytesRead = responseStream.Read(buffer, 0, buffer.Length);
+                                request.OnDownloadProgressed(totalBytesRead, contentLength);
+
+                                outputStream.Write(buffer, 0, bytesRead);
+
+                                bytesRead = responseStream.Read(buffer, 0, buffer.Length);
+                            }
                         }
                     }
-                }
 
-                return new TusHttpResponse(
-                    response.StatusCode,
-                    response.Headers.AllKeys
-                        .ToDictionary(headerName => headerName, headerName => response.Headers.Get(headerName)),
-                    outputStream.ToArray());
+                    return new TusHttpResponse(
+                        response.StatusCode,
+                        response.Headers.AllKeys
+                            .ToDictionary(headerName => headerName, headerName => response.Headers.Get(headerName)),
+                        outputStream.ToArray());
+                }
             }
             catch (OperationCanceledException cancelEx)
             {

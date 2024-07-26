@@ -101,7 +101,7 @@ namespace qckdev.Storage.TusDotNetClient
                     }
                 }
 
-                var response = (HttpWebResponse) await webRequest.GetResponseAsync()
+                using var response = (HttpWebResponse) await webRequest.GetResponseAsync()
                     .ConfigureAwait(false);
 
                 //contentLength=0 for gzipped responses due to .net bug
